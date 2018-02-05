@@ -2,17 +2,21 @@
 
 // Apply the java plugin to add support for Java
 plugins {
+    id("io.franzbecker.gradle-lombok").version("1.11")
     java
     application
 }
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
     // Annotations for better code documentation
     compile("com.intellij:annotations:12.0")
+    compile("ch.qos.logback:logback-classic:1.2.3")
+    compile("com.google.guava:guava:23.6-jre")
 
     // JUnit test framework
     testCompile("junit:junit:4.12")
